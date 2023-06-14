@@ -8,7 +8,7 @@
 ## Preprocessing data and training
 - Visit the following URL
 https://gdc.cancer.gov/about-data/gdc-data-processing/gdc-reference-files
-- Download
+- Download the reference files which is too large for us to push (github allows only < 100MB file)
 GRCh38.d1.vd1.fa.tar.gz
 - Compress and save GRCh38.d1.vd1.fa in ./reference
 

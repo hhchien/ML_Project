@@ -1,0 +1,101 @@
+{
+    "os": "Linux-5.19.0-35-generic-x86_64-with-glibc2.35",
+    "python": "3.10.6",
+    "heartbeatAt": "2023-06-14T12:31:31.854106",
+    "startedAt": "2023-06-14T12:31:30.553445",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "16"
+    ],
+    "state": "running",
+    "program": "/media/data/huyennm/ML/training_wes_copy.py",
+    "codePath": "training_wes_copy.py",
+    "host": "quangnh",
+    "username": "huyennm",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 4.300166666666666,
+        "min": 800.0,
+        "max": 4600.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.3,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.3,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4.299,
+            "min": 800.0,
+            "max": 4600.0
+        }
+    ],
+    "disk": {
+        "total": 233.17998886108398,
+        "used": 36.30323791503906
+    },
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 31.26966094970703
+    }
+}

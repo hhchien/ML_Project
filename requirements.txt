@@ -1,0 +1,7 @@
+numpy
+biopython
+scikit-learn
+torch 
+torchvision 
+torchaudio
+wandb 

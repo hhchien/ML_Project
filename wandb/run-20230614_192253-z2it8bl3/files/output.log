@@ -1,0 +1,32 @@
+Training with WES datasets --- Window size = 16
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21]
+219477 219477
+(197529, 5, 33, 3) (197529, 3)
+(21948, 5, 33, 3) (21948, 3)
+(896, 5, 33, 3) (896, 3)
+Balanced weights: [0.14904647 0.19026911 0.32735109]
+Config: {'batch_size': 32, 'shuffle': True, 'num_workers': 3}
+100
+Training infor:
+ - epoch: 100
+ - Leanring rate: 0.001
+ - Learning rate scheduler: True
+ - Early stopping: False
+[INFO] training the network...
+[epoch: 1 -- Lr: [0.001] -- time: 122.13716292381287s]  --- Acc_train: 0.6981810265834384 --- loss_train : 0.1026137906421889 --- Acc_val: 0.7447603426280299 --- loss_val : 0.09258677865778937 --- f1_score: 0.7463242717809869
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 2 -- Lr: [0.001] -- time: 43.337342977523804s]  --- Acc_train: 0.7468827362058229 --- loss_train : 0.09204718561194347 --- Acc_val: 0.7539183524694733 --- loss_val : 0.08991357616503699 --- f1_score: 0.7549752747055926
+[epoch: 3 -- Lr: [0.001] -- time: 69.22769951820374s]  --- Acc_train: 0.7551093763447393 --- loss_train : 0.08947614124057555 --- Acc_val: 0.7611627483141972 --- loss_val : 0.08907205588535713 --- f1_score: 0.7615000243967792
+[epoch: 4 -- Lr: [0.001] -- time: 52.0411217212677s]  --- Acc_train: 0.7592707906180864 --- loss_train : 0.08827250119740963 --- Acc_val: 0.7672680882084928 --- loss_val : 0.08684265717711663 --- f1_score: 0.7676546035535428
+[epoch: 5 -- Lr: [0.001] -- time: 55.931368350982666s]  --- Acc_train: 0.76100724450587 --- loss_train : 0.08740289832649545 --- Acc_val: 0.7655367231638418 --- loss_val : 0.08576066157322923 --- f1_score: 0.7663884455382693
+[epoch: 6 -- Lr: [0.001] -- time: 67.55213522911072s]  --- Acc_train: 0.7629917632347655 --- loss_train : 0.0866317353633726 --- Acc_val: 0.766630216876253 --- loss_val : 0.08555682416828138 --- f1_score: 0.7672656427307832
+[epoch: 7 -- Lr: [0.001] -- time: 43.73832988739014s]  --- Acc_train: 0.7641915870581029 --- loss_train : 0.08629717954931403 --- Acc_val: 0.7691361399671952 --- loss_val : 0.08631304757785722 --- f1_score: 0.7700048727410918
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes_copy.py", line 210, in <module>
+    local_batch, local_labels = local_batch.to(device), local_labels.to(device)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes_copy.py", line 210, in <module>
+    local_batch, local_labels = local_batch.to(device), local_labels.to(device)
+KeyboardInterrupt

@@ -1,0 +1,15 @@
+Training with WES datasets --- Window size = 10
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21]
+229675 229675
+(206707, 5, 21, 3) (206707, 3)
+(22968, 5, 21, 3) (22968, 3)
+(941, 5, 21, 3) (941, 3)
+Balanced weights: [0.14772762 0.19151424 0.32742481]
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes_copy.py", line 131, in <module>
+    weight_balance = weight_balance.to(device)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes_copy.py", line 131, in <module>
+    weight_balance = weight_balance.to(device)
+KeyboardInterrupt

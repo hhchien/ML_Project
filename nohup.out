@@ -1,0 +1,197 @@
+/media/data/huyennm/ML/training_wes.py:1: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.command.config import config
+wandb: Currently logged in as: mnhhuyen-26 (huyennm). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.0
+wandb: Run data is saved locally in /media/data/huyennm/ML/wandb/run-20230614_022717-2t3cmjhn
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run WES_ws_16
+wandb: ⭐️ View project at https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20
+wandb: 🚀 View run at https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/2t3cmjhn
+Training with WES datasets --- Window size = 16
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21]
+219477 219477
+(197529, 5, 33, 3) (197529, 3)
+(21948, 5, 33, 3) (21948, 3)
+(896, 5, 33, 3) (896, 3)
+Balanced weights: [0.14904647 0.19026911 0.32735109]
+Config: {'batch_size': 32, 'shuffle': True, 'num_workers': 3}
+100
+Training infor:
+ - epoch: 100 
+ - Leanring rate: 0.001 
+ - Learning rate scheduler: True 
+ - Early stopping: False 
+
+[INFO] training the network...
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 242, in <module>
+    f1_micro = metrics.f1_score(y_true=truth.numpy(), y_pred=pred.numpy(), average='micro')
+AttributeError: 'list' object has no attribute 'numpy'
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 242, in <module>
+    f1_micro = metrics.f1_score(y_true=truth.numpy(), y_pred=pred.numpy(), average='micro')
+AttributeError: 'list' object has no attribute 'numpy'
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: | 0.006 MB of 0.006 MB uploaded (0.000 MB deduped)wandb: 🚀 View run WES_ws_16 at: https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/2t3cmjhn
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230614_022717-2t3cmjhn/logs
+/media/data/huyennm/ML/training_wes.py:1: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.command.config import config
+wandb: Currently logged in as: mnhhuyen-26 (huyennm). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.0
+wandb: Run data is saved locally in /media/data/huyennm/ML/wandb/run-20230614_023102-65oek1hl
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run WES_ws_16
+wandb: ⭐️ View project at https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20
+wandb: 🚀 View run at https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/65oek1hl
+Training with WES datasets --- Window size = 16
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21]
+219477 219477
+(197529, 5, 33, 3) (197529, 3)
+(21948, 5, 33, 3) (21948, 3)
+(896, 5, 33, 3) (896, 3)
+Balanced weights: [0.14904647 0.19026911 0.32735109]
+Config: {'batch_size': 32, 'shuffle': True, 'num_workers': 3}
+100
+Training infor:
+ - epoch: 100 
+ - Leanring rate: 0.001 
+ - Learning rate scheduler: True 
+ - Early stopping: False 
+
+[INFO] training the network...
+/media/data/huyennm/ML/training_wes.py:242: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  truth_np = np.array(truth)
+/media/data/huyennm/ML/training_wes.py:242: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  truth_np = np.array(truth)
+/media/data/huyennm/ML/training_wes.py:243: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  pred_np = np.array(pred)
+/media/data/huyennm/ML/training_wes.py:243: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  pred_np = np.array(pred)
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 244, in <module>
+    f1_micro = metrics.f1_score(y_true=truth_np, y_pred=pred_np, average='micro')
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1044, in f1_score
+    return fbeta_score(y_true, y_pred, beta=1, labels=labels,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1168, in fbeta_score
+    _, _, f, _ = precision_recall_fscore_support(y_true, y_pred,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1433, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels,
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1250, in _check_set_wise_labels
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 98, in _check_targets
+    raise ValueError("{0} is not supported".format(y_type))
+ValueError: unknown is not supported
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 244, in <module>
+    f1_micro = metrics.f1_score(y_true=truth_np, y_pred=pred_np, average='micro')
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1044, in f1_score
+    return fbeta_score(y_true, y_pred, beta=1, labels=labels,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1168, in fbeta_score
+    _, _, f, _ = precision_recall_fscore_support(y_true, y_pred,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1433, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels,
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1250, in _check_set_wise_labels
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 98, in _check_targets
+    raise ValueError("{0} is not supported".format(y_type))
+ValueError: unknown is not supported
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.002 MB of 0.002 MB uploaded (0.000 MB deduped)wandb: \ 0.002 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: | 0.002 MB of 0.010 MB uploaded (0.000 MB deduped)wandb: / 0.010 MB of 0.010 MB uploaded (0.000 MB deduped)wandb: 🚀 View run WES_ws_16 at: https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/65oek1hl
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230614_023102-65oek1hl/logs
+/media/data/huyennm/ML/training_wes.py:1: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+  from distutils.command.config import config
+wandb: Currently logged in as: mnhhuyen-26 (huyennm). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.0
+wandb: Run data is saved locally in /media/data/huyennm/ML/wandb/run-20230614_024731-0rc46jju
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run WES_ws_16
+wandb: ⭐️ View project at https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20
+wandb: 🚀 View run at https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/0rc46jju
+Training with WES datasets --- Window size = 16
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21]
+219477 219477
+(197529, 5, 33, 3) (197529, 3)
+(21948, 5, 33, 3) (21948, 3)
+(896, 5, 33, 3) (896, 3)
+Balanced weights: [0.14904647 0.19026911 0.32735109]
+Config: {'batch_size': 32, 'shuffle': True, 'num_workers': 3}
+100
+Training infor:
+ - epoch: 100 
+ - Leanring rate: 0.001 
+ - Learning rate scheduler: True 
+ - Early stopping: False 
+
+[INFO] training the network...
+/usr/lib/python3/dist-packages/sklearn/utils/multiclass.py:141: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  y = np.asarray(y)
+/usr/lib/python3/dist-packages/sklearn/utils/multiclass.py:141: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  y = np.asarray(y)
+/usr/lib/python3/dist-packages/sklearn/utils/multiclass.py:254: FutureWarning: The input object of type 'Tensor' is an array-like implementing one of the corresponding protocols (`__array__`, `__array_interface__` or `__array_struct__`); but not a sequence (or 0-D). In the future, this object will be coerced as if it was first converted using `np.array(obj)`. To retain the old behaviour, you have to either modify the type 'Tensor', or assign to an empty array created with `np.empty(correct_shape, dtype=object)`.
+  y = np.asarray(y)
+/usr/lib/python3/dist-packages/sklearn/utils/multiclass.py:254: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  y = np.asarray(y)
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 245, in <module>
+    f1 = f1_score(truth, pred, average='weighted')
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1044, in f1_score
+    return fbeta_score(y_true, y_pred, beta=1, labels=labels,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1168, in fbeta_score
+    _, _, f, _ = precision_recall_fscore_support(y_true, y_pred,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1433, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels,
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1250, in _check_set_wise_labels
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 98, in _check_targets
+    raise ValueError("{0} is not supported".format(y_type))
+ValueError: unknown is not supported
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 245, in <module>
+    f1 = f1_score(truth, pred, average='weighted')
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1044, in f1_score
+    return fbeta_score(y_true, y_pred, beta=1, labels=labels,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1168, in fbeta_score
+    _, _, f, _ = precision_recall_fscore_support(y_true, y_pred,
+  File "/usr/lib/python3/dist-packages/sklearn/utils/validation.py", line 72, in inner_f
+    return f(**kwargs)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1433, in precision_recall_fscore_support
+    labels = _check_set_wise_labels(y_true, y_pred, average, labels,
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 1250, in _check_set_wise_labels
+    y_type, y_true, y_pred = _check_targets(y_true, y_pred)
+  File "/usr/lib/python3/dist-packages/sklearn/metrics/_classification.py", line 98, in _check_targets
+    raise ValueError("{0} is not supported".format(y_type))
+ValueError: unknown is not supported
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: 🚀 View run WES_ws_16 at: https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/0rc46jju
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230614_024731-0rc46jju/logs

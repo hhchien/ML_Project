@@ -195,3 +195,9 @@ wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort
 wandb: 🚀 View run WES_ws_16 at: https://wandb.ai/huyennm/Mutation_Detection_With_CNN%20/runs/0rc46jju
 wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
 wandb: Find logs at: ./wandb/run-20230614_024731-0rc46jju/logs
+Traceback (most recent call last):
+  File "/media/data/huyennm/ML/training_wes.py", line 8, in <module>
+    import torch
+  File "/media/data/huyennm/.local/lib/python3.10/site-packages/torch/__init__.py", line 229, in <module>
+    from torch._C import *  # noqa: F403
+KeyboardInterrupt

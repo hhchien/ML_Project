@@ -23,7 +23,7 @@ class NSBlock(nn.Module):
             0, (mp_ks - 1) // 2), stride=(1, mp_st))
 
     def forward(self, x):
-        y1 = (F.relu(self.bn_r1(self.conv_r1(x))))
+        y1 = (F.leaky_relu(self.bn_r1(self.conv_r1(x))))
         y2 = (self.bn_r2(self.conv_r2(y1)))
         y3 = x + y2
         z = self.pool_r2(y3)
@@ -72,14 +72,14 @@ class NeuSomaticNet(nn.Module):
         self.drop = nn.Dropout(0.25)
 
     def forward(self, x):
-        x = self.pool1(F.relu(self.bn1(self.conv1(x))))
+        x = self.pool1(F.leaky_relu(self.bn1(self.conv1(x))))
         internal_outs = [x]
         x = self.res_layers(x)
         x = self.drop(x)
         internal_outs.append(x)
         # print(x.shape)
         x2 = x.view(-1, self.fc_dim)
-        x3 = F.relu(self.fc1(x2))
+        x3 = F.leaky_relu(self.fc1(x2))
         internal_outs.extend([x2, x3])
         o1 = self.fc2(x3)  
 

@@ -26,7 +26,12 @@ GRCh38.d1.vd1.fa.tar.gz
 
 - To create known-label test data, run: ```$ python3 create_data_pickle_wes_test.py <ws> <lab_name> ```, where two arguments are the same as previous step.
 
-- Training the model and testing it on the known-label data created above, run: ```$ python3 training_wes.py <ws>```, where ```<ws>``` is the window size of the input matrices.
+- Training the model and testing it on the known-label data created above, run: ```$ python3 training_wes.py <ws> <lr>```, where ```<ws>``` is the window size of the input matrices and ```<lr>``` is the learning rate.
 
 ## Note
 If running on some specific laboratories, please remember to change the list_lab on training_wes.py
+
+## Another use
+Beside train and test, we provide a run tool that can process unlabeled data using our trained model.
+Run: ```$ python3 run.py <file_name> <option>```, where <file_name> is path to a BAM file, <option> is an optional field to output high confidence variants only by adding "-h".
+After successfully run, the result will be store as CSV format in /output folder.

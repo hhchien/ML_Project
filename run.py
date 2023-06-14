@@ -23,7 +23,7 @@ class RunPredict:
     def __init__(self, sam_file, high_confidence = 0):
         self.sam_file = sam_file
         self.high_confidence = high_confidence
-        self.confidence_threshold = 0.9
+        self.confidence_threshold = 0.8
         self.model_path = './save_model/best_classifier_type_somatic_model_full_wes_ws16.pth'
         self.reference_file = './reference/GRCh38.d1.vd1.fa'
         self.window_size = 16

@@ -1,0 +1,198 @@
+wandb: Currently logged in as: mnhhuyen-26 (huyennm). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.14.0
+wandb: Run data is saved locally in /media/data/huyennm/ML/wandb/run-20230616_032956-7t86bsvb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run WES_ws_10_with_learning_rate_0.0001
+wandb: ⭐️ View project at https://wandb.ai/huyennm/Mutation_Detection_Comparation_Of_Learning_Rate
+wandb: 🚀 View run at https://wandb.ai/huyennm/Mutation_Detection_Comparation_Of_Learning_Rate/runs/7t86bsvb
+Training with WES datasets --- Window size = 10
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21]
+229675 229675
+(206707, 5, 21, 3) (206707, 3)
+(22968, 5, 21, 3) (22968, 3)
+(941, 5, 21, 3) (941, 3)
+Balanced weights: [0.14772762 0.19151424 0.32742481]
+Config: {'batch_size': 32, 'shuffle': True, 'num_workers': 3}
+60
+Training infor:
+ - epoch: 100 
+ - Leanring rate: 0.0001 
+ - Learning rate scheduler: True 
+ - Early stopping: False 
+
+[INFO] training the network...
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 1 -- Lr: [0.0001] -- time: 33.56324601173401s]  --- Acc_train: 0.5735558060443042 --- loss_train : 0.12743623681152355 --- Acc_val: 0.657088122605364 --- loss_val : 0.10677911823720554 --- f1_score: 0.6531189854893737
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 2 -- Lr: [0.0001] -- time: 30.25984787940979s]  --- Acc_train: 0.7149782058662745 --- loss_train : 0.09849581574752687 --- Acc_val: 0.7267938000696621 --- loss_val : 0.09347602980033799 --- f1_score: 0.727500732708372
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 3 -- Lr: [0.0001] -- time: 30.016688346862793s]  --- Acc_train: 0.7371641985999506 --- loss_train : 0.09287687731283953 --- Acc_val: 0.7466039707419018 --- loss_val : 0.08970890634430057 --- f1_score: 0.7477867913738144
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 4 -- Lr: [0.0001] -- time: 30.310409545898438s]  --- Acc_train: 0.7454803175509296 --- loss_train : 0.09057244152379637 --- Acc_val: 0.746037965865552 --- loss_val : 0.08860223353477874 --- f1_score: 0.7475070985287731
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 5 -- Lr: [0.0001] -- time: 27.673349142074585s]  --- Acc_train: 0.7501971389454639 --- loss_train : 0.08934920954806852 --- Acc_val: 0.7531783350748869 --- loss_val : 0.0876237364739381 --- f1_score: 0.7546898039461293
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 6 -- Lr: [0.0001] -- time: 28.659864902496338s]  --- Acc_train: 0.7526982637259503 --- loss_train : 0.08841935771578435 --- Acc_val: 0.7555729710902125 --- loss_val : 0.08693509604081494 --- f1_score: 0.7570703202008302
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 7 -- Lr: [0.0001] -- time: 29.614377975463867s]  --- Acc_train: 0.7542415109309312 --- loss_train : 0.08770494721483216 --- Acc_val: 0.7545715778474399 --- loss_val : 0.08633163090999023 --- f1_score: 0.7561145974938467
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 8 -- Lr: [0.0001] -- time: 28.04136300086975s]  --- Acc_train: 0.7560701863023507 --- loss_train : 0.0872828856804801 --- Acc_val: 0.7626262626262627 --- loss_val : 0.08568072519381202 --- f1_score: 0.7638036684786765
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 9 -- Lr: [0.0001] -- time: 29.15791916847229s]  --- Acc_train: 0.7579327260325001 --- loss_train : 0.08676301817385866 --- Acc_val: 0.7575322187391152 --- loss_val : 0.08554365891805596 --- f1_score: 0.7592303246231863
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 10 -- Lr: [0.0001] -- time: 28.126180171966553s]  --- Acc_train: 0.758740632876487 --- loss_train : 0.08634143675183109 --- Acc_val: 0.7614942528735632 --- loss_val : 0.08527351651881324 --- f1_score: 0.7630964794356571
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 11 -- Lr: [0.0001] -- time: 28.853479146957397s]  --- Acc_train: 0.7594324333476854 --- loss_train : 0.0860034237770857 --- Acc_val: 0.7584465343086033 --- loss_val : 0.08500089955685733 --- f1_score: 0.7596650075638076
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 12 -- Lr: [0.0001] -- time: 28.790470361709595s]  --- Acc_train: 0.7605064172959793 --- loss_train : 0.08569532771855572 --- Acc_val: 0.7627133402995472 --- loss_val : 0.08440151279240156 --- f1_score: 0.7639905238864821
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 13 -- Lr: [0.0001] -- time: 28.990098476409912s]  --- Acc_train: 0.7616384544306676 --- loss_train : 0.08539872233225469 --- Acc_val: 0.7644548937652386 --- loss_val : 0.08475090333255304 --- f1_score: 0.7657720878179736
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 14 -- Lr: [0.0001] -- time: 28.69888997077942s]  --- Acc_train: 0.762025475673296 --- loss_train : 0.08524795321034076 --- Acc_val: 0.7662399860675723 --- loss_val : 0.08404299336911494 --- f1_score: 0.7675419430660652
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 15 -- Lr: [0.0001] -- time: 27.88515281677246s]  --- Acc_train: 0.7639605818864383 --- loss_train : 0.08478463202914982 --- Acc_val: 0.7557906652734239 --- loss_val : 0.08492526263751224 --- f1_score: 0.7567513595161991
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 16 -- Lr: [0.0001] -- time: 28.07411551475525s]  --- Acc_train: 0.7630897840905243 --- loss_train : 0.08460874612432205 --- Acc_val: 0.7705503308951585 --- loss_val : 0.08356607781034806 --- f1_score: 0.7715067321550012
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 17 -- Lr: [0.0001] -- time: 29.066404819488525s]  --- Acc_train: 0.7649474860551408 --- loss_train : 0.08450411664937434 --- Acc_val: 0.7657175200278649 --- loss_val : 0.08352111973381747 --- f1_score: 0.7671408115562218
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 18 -- Lr: [0.0001] -- time: 29.798896551132202s]  --- Acc_train: 0.7650490791313308 --- loss_train : 0.0842538992004146 --- Acc_val: 0.7647596656217346 --- loss_val : 0.08362553339659964 --- f1_score: 0.766075545854898
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 19 -- Lr: [0.0001] -- time: 29.73765993118286s]  --- Acc_train: 0.7658521482097849 --- loss_train : 0.08403684178336736 --- Acc_val: 0.7587513061650992 --- loss_val : 0.08375755046440446 --- f1_score: 0.7602416225098412
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 20 -- Lr: [0.0001] -- time: 28.777276039123535s]  --- Acc_train: 0.7659053636306463 --- loss_train : 0.08373676534254347 --- Acc_val: 0.7664141414141414 --- loss_val : 0.08308657633654278 --- f1_score: 0.7678943005404125
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 21 -- Lr: [0.0001] -- time: 30.10047221183777s]  --- Acc_train: 0.7667326215367646 --- loss_train : 0.08366754704427663 --- Acc_val: 0.7691570881226054 --- loss_val : 0.08330408607337642 --- f1_score: 0.7705074324979225
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 22 -- Lr: [0.0001] -- time: 28.995317459106445s]  --- Acc_train: 0.7659682545825734 --- loss_train : 0.08355130196153987 --- Acc_val: 0.7641936607453849 --- loss_val : 0.08295898537355048 --- f1_score: 0.7656163421906896
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 23 -- Lr: [0.0001] -- time: 30.940731525421143s]  --- Acc_train: 0.7667616481299617 --- loss_train : 0.0833440986352367 --- Acc_val: 0.7677638453500523 --- loss_val : 0.08242969311965509 --- f1_score: 0.7691403489111719
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 24 -- Lr: [0.0001] -- time: 28.76141595840454s]  --- Acc_train: 0.7683387596936727 --- loss_train : 0.08327543313279093 --- Acc_val: 0.7718129571577848 --- loss_val : 0.08226297185391224 --- f1_score: 0.7729467713162286
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 25 -- Lr: [0.0001] -- time: 28.79256010055542s]  --- Acc_train: 0.7681404113068256 --- loss_train : 0.08297822223619629 --- Acc_val: 0.7704197143852316 --- loss_val : 0.08285333189336927 --- f1_score: 0.7716022364852204
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 26 -- Lr: [0.0001] -- time: 31.873908519744873s]  --- Acc_train: 0.768092033651497 --- loss_train : 0.08304750508265557 --- Acc_val: 0.7701584813653779 --- loss_val : 0.08248238676936166 --- f1_score: 0.7712458554632501
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 27 -- Lr: [0.0001] -- time: 28.028663635253906s]  --- Acc_train: 0.7697659005258651 --- loss_train : 0.08278768517824824 --- Acc_val: 0.7632793451758969 --- loss_val : 0.08250006169236127 --- f1_score: 0.764346310450685
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 28 -- Lr: [0.0001] -- time: 30.23413586616516s]  --- Acc_train: 0.770104544113165 --- loss_train : 0.08265569849564774 --- Acc_val: 0.767110762800418 --- loss_val : 0.08237971687839583 --- f1_score: 0.7683217291412361
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 29 -- Lr: [0.0001] -- time: 29.215487003326416s]  --- Acc_train: 0.7704528632315306 --- loss_train : 0.08246370670457388 --- Acc_val: 0.7708115639150122 --- loss_val : 0.08206746835390173 --- f1_score: 0.7721623664119305
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 30 -- Lr: [0.0001] -- time: 27.93109703063965s]  --- Acc_train: 0.770341594624275 --- loss_train : 0.08246984742784058 --- Acc_val: 0.7730320445837687 --- loss_val : 0.0819039881424224 --- f1_score: 0.774126801849367
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 31 -- Lr: [0.0001] -- time: 28.79638910293579s]  --- Acc_train: 0.7710140440333418 --- loss_train : 0.08239879112436567 --- Acc_val: 0.7716388018112156 --- loss_val : 0.08249647385518416 --- f1_score: 0.7726923644861967
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 32 -- Lr: [9e-05] -- time: 31.069453239440918s]  --- Acc_train: 0.7709269642537505 --- loss_train : 0.0821589517574933 --- Acc_val: 0.7725966562173459 --- loss_val : 0.0820815165552522 --- f1_score: 0.7739488840740871
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 33 -- Lr: [8.1e-05] -- time: 28.964704751968384s]  --- Acc_train: 0.7714252541036346 --- loss_train : 0.08193349539603882 --- Acc_val: 0.7717694183211424 --- loss_val : 0.08281522431905729 --- f1_score: 0.772718648835297
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 34 -- Lr: [7.290000000000001e-05] -- time: 29.314188718795776s]  --- Acc_train: 0.7723782939136071 --- loss_train : 0.0818152082233613 --- Acc_val: 0.7754266805990944 --- loss_val : 0.08224144972776416 --- f1_score: 0.7761532467008245
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 35 -- Lr: [6.561e-05] -- time: 32.09750986099243s]  --- Acc_train: 0.7720251370297088 --- loss_train : 0.08161192542951763 --- Acc_val: 0.7750783699059561 --- loss_val : 0.08162842974491055 --- f1_score: 0.7761886960924446
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 36 -- Lr: [5.904900000000001e-05] -- time: 29.23737335205078s]  --- Acc_train: 0.7730072034328784 --- loss_train : 0.08149249194536827 --- Acc_val: 0.7734238941135493 --- loss_val : 0.08152118676135914 --- f1_score: 0.7746617500590288
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 37 -- Lr: [5.3144100000000005e-05] -- time: 30.168201446533203s]  --- Acc_train: 0.7729249614188198 --- loss_train : 0.08130671849114057 --- Acc_val: 0.770942180424939 --- loss_val : 0.08131392506135335 --- f1_score: 0.7722974825801462
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 38 -- Lr: [4.782969000000001e-05] -- time: 29.936929941177368s]  --- Acc_train: 0.7731378231022655 --- loss_train : 0.08128119879484315 --- Acc_val: 0.7739463601532567 --- loss_val : 0.08145809268310304 --- f1_score: 0.7751384326176227
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 39 -- Lr: [4.304672100000001e-05] -- time: 27.662396907806396s]  --- Acc_train: 0.7739795943049824 --- loss_train : 0.08119101374246371 --- Acc_val: 0.7730320445837687 --- loss_val : 0.08123355971053892 --- f1_score: 0.7741382422835515
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 40 -- Lr: [3.874204890000001e-05] -- time: 27.592944860458374s]  --- Acc_train: 0.7757502164900076 --- loss_train : 0.08096769573750559 --- Acc_val: 0.7737286659700453 --- loss_val : 0.08139406023211677 --- f1_score: 0.7749518927073668
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 41 -- Lr: [3.486784401000001e-05] -- time: 28.498926877975464s]  --- Acc_train: 0.7743762910786766 --- loss_train : 0.08106134135141532 --- Acc_val: 0.7733368164402648 --- loss_val : 0.08129544970610364 --- f1_score: 0.7745544186158129
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 42 -- Lr: [3.138105960900001e-05] -- time: 30.208773374557495s]  --- Acc_train: 0.7745601261689251 --- loss_train : 0.08085904252425416 --- Acc_val: 0.7720741901776385 --- loss_val : 0.08135982193684974 --- f1_score: 0.77329820775621
+/media/data/huyennm/.local/lib/python3.10/site-packages/torch/optim/lr_scheduler.py:265: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+[epoch: 43 -- Lr: [2.824295364810001e-05] -- time: 28.39399814605713s]  --- Acc_train: 0.774158591629698 --- loss_train : 0.0808657853326742 --- Acc_val: 0.7743382096830372 --- loss_val : 0.08117504260088568 --- f1_score: 0.7756483915341952
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:  acc_train ▁▆▇▇▇▇▇▇▇▇▇▇████████████████████████████
+wandb:    acc_val ▁▅▆▆▇▇▇▇▇▇▇▇▇▇█▇▇▇▇█▇████▇██████████████
+wandb:   f1_score ▁▅▆▆▇▇▇▇▇▇▇▇▇▇█▇▇▇██▇████▇██████████████
+wandb: loss_train █▄▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   loss_val █▄▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:  acc_train 0.77416
+wandb:    acc_val 0.77434
+wandb:   f1_score 0.77565
+wandb: loss_train 0.08087
+wandb:   loss_val 0.08118
+wandb: 
+wandb: 🚀 View run WES_ws_10_with_learning_rate_0.0001 at: https://wandb.ai/huyennm/Mutation_Detection_Comparation_Of_Learning_Rate/runs/7t86bsvb
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230616_032956-7t86bsvb/logs
+Stopping training in epoch 44
+****** Testing model with best checkpoint******
+[514. 227.  11.] [632. 293.  16.] [0.81329114 0.77474403 0.6875    ] 0.7991498405951116
+              precision    recall  f1-score   support
+
+           0       0.88      0.81      0.84       632
+           1       0.68      0.77      0.73       293
+           2       0.48      0.69      0.56        16
+
+    accuracy                           0.80       941
+   macro avg       0.68      0.76      0.71       941
+weighted avg       0.81      0.80      0.80       941
+
+****** Testing model with last checkpoint******
+[495. 236.  11.] [632. 293.  16.] [0.78322785 0.80546075 0.6875    ] 0.7885228480340064
+              precision    recall  f1-score   support
+
+           0       0.89      0.78      0.83       632
+           1       0.66      0.81      0.73       293
+           2       0.42      0.69      0.52        16
+
+    accuracy                           0.79       941
+   macro avg       0.66      0.76      0.69       941
+weighted avg       0.81      0.79      0.79       941
+

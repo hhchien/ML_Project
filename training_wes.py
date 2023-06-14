@@ -24,12 +24,13 @@ torch.backends.cudnn.benchmark = True
 torch.cuda.empty_cache()
 
 window_size = int(sys.argv[1])
+learning_rate = float(sys.argv[2])
 
 # for wandb
 os.environ["WANDB_API_KEY"] = "3607c36d6772a9ce6c02ca86209013650366fc23"
 wandb.login()
 # init wandb
-wandb.init(project="Mutation_Detection", name='WES_ws_{}'.format(window_size))
+wandb.init(project="Mutation_Detection_Comparation_Test", name='All_lab_ws_{}_with_learning_rate_{}'.format(window_size, learning_rate))
 
 def load_pickle(file):
     with open(file, 'rb') as f:
@@ -66,7 +67,7 @@ label_train = []
 matrix_test = []
 label_test = []
 
-list_lab = ['WES_EA_T_1', 'WES_IL_T_2', 'WES_FD_T_3', 'WES_NV_T_1', 'WES_LL_T_2','WES_NC_T_3']
+list_lab = ['WES_EA_T_1','WES_FD_T_3', 'WES_IL_T_2', 'WES_LL_T_2', 'WES_NC_T_3', 'WES_NV_T_1']
 for lab_name in list_lab:
     save_pickle_dir_train = './data/pickle/{}_ws{}_pickle'.format(lab_name, window_size)
     save_pickle_dir_test = './data_test/pickle/{}_ws{}_pickle'.format(lab_name, window_size) 
@@ -116,6 +117,20 @@ print(input_matrix_train.shape, labels_train.shape)
 print(input_matrix_val.shape, labels_val.shape)
 print(input_matrix_test.shape, labels_test.shape)
 
+# For training set
+num_non_somatic_train = np.sum(labels_train[:, 0]) 
+num_snv_train = np.sum(labels_train[:, 1]) 
+num_indel_train = np.sum(labels_train[:, 2]) 
+
+print("Training set: Non-somatic: {}, SNV: {}, INDEL: {}".format(num_non_somatic_train, num_snv_train, num_indel_train))
+
+# For validation set
+num_non_somatic_val = np.sum(labels_val[:, 0]) 
+num_snv_val = np.sum(labels_val[:, 1]) 
+num_indel_val = np.sum(labels_val[:, 2]) 
+
+print("Validation set: Non-somatic: {}, SNV: {}, INDEL: {}".format(num_non_somatic_val, num_snv_val, num_indel_val))
+
 num_data_train = len(input_matrix_train)
 num_data_val = len(input_matrix_val)
 num_data_test = len(input_matrix_test)
@@ -136,7 +151,7 @@ input_matrix_val =  torch.permute(torch.from_numpy(input_matrix_val), (0, 3, 1, 
 input_matrix_test =  torch.permute(torch.from_numpy(input_matrix_test), (0, 3, 1, 2))
 
 ## Create Dataloader 
-params = {'batch_size': 32,
+params = {'batch_size': 128,
         'shuffle': True,
         'num_workers': 3}
 print("Config:", params)
@@ -161,7 +176,7 @@ model.to(device)
 error = nn.CrossEntropyLoss(weight_balance)
 
 ## Optimizer
-learning_rate = 0.001
+# learning_rate = 0.0001
 momentum = 0.9
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 lmbda = lambda epoch: 0.9 ** epoch
@@ -173,7 +188,7 @@ scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lmbda)
 max_epochs = 100
 lr_reduce_proportion = 0.3
 lr_reduce_epoch = int(max_epochs * lr_reduce_proportion)
-print(f"Training infor:\n - epoch: {max_epochs} \n - Leanring rate: {learning_rate} \n - Learning rate scheduler: True \n - Early stopping: False \n")
+print(f"Training infor:\n - epoch: {max_epochs} \n - Leanring rate: {learning_rate} \n - Learning rate scheduler: True \n - Early stopping: True \n")
 
 # measure how long training is going to take
 print("[INFO] training the network...")
@@ -191,7 +206,7 @@ f1_max = 0.0
 early_stop = 5
 count_stop = 0
 
-epsilon = 0.0003  
+epsilon = 0.0002  
 prev_loss = 0
 
 for epoch in range(max_epochs):
@@ -268,7 +283,7 @@ for epoch in range(max_epochs):
     # get learning rate
     print(f'[epoch: {epoch + 1} -- Lr: {scheduler.get_lr()} -- time: {time.time()-start_time}s]  --- Acc_train: {train_acc / num_data_train} --- loss_train : {train_loss / num_data_train} --- Acc_val: {val_acc / num_data_val} --- loss_val : {valid_loss / num_data_val} --- f1_score: {f1_micro}')
 
-    wandb.log({"acc_train": train_acc / num_data_train, "loss_train": train_loss / num_data_train, "acc_val": val_acc / num_data_val, "loss_val": valid_loss / num_data_val, "f1_score": f1_micro})
+    wandb.log({"acc_train": train_acc / num_data_train, "loss_train": train_loss / num_data_train, "acc_val": val_acc / num_data_val, "loss_val": valid_loss / num_data_val, "f1_score": f1_micro, "time":time.time()-start_time})
     
     # save model 
     torch.save(model, config_param.folder_save_model + 'last_classifier_type_somatic_model_full_wes_ws{}.pth'.format(window_size))
